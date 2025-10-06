@@ -1,0 +1,140 @@
+1: How do you declare a variable in JavaScript and difference between var , let and const ?
+--> In JavaScript we can declare a variable in 3 ways 
+
+a: Var - This is a global scope in which we can redefine and redecalre .
+
+var a = 10;
+var a = 20;   // ✅ Allowed
+a = 30;       // ✅ Allowed
+console.log(a); // 30
+
+b: let - This is a blocked scope in which we can only redefined .
+
+let b = 10;
+let b = 20;   // ❌ Error: already declared
+b = 30;       // ✅ Allowed
+console.log(b); // 30
+
+
+c: const - This is also a blocked scope variable in which w neither we re declared nor redefined .
+
+const c = 100;
+c = 200;       // ❌ Error: Assignment to constant variable
+
+
+3: Can you change the value of a const variable?
+--> We cannot change the value of const variable only we can change the properties of const object.
+
+const person = { name: "Ayush" };
+person.name = "Singh";  // ✅ Allowed
+console.log(person.name); // Singh
+
+4: What will happen if you use a variable without declaring it.
+--> 
+y = 20;
+console.log(y); // Reference Error
+
+
+5: What is the default value of an unintialized variable in JavScript?
+--> 
+var x;
+console.log(x); // Undefined
+
+6: What are the primitive data types in JavaScript.
+--> Number , Null , Symbol, String , BigInt , Boolean , Undefiend
+
+7: What is the difference between null and undefined ?
+-->
+In JavaScript, null and undefined are both used to represent the absence of a value, but they are different in meaning and usage.
+let a;
+console.log(a); // Output: undefined
+
+let b = null;
+console.log(b); // Output: null
+
+8: is Javascript a statically typed or dyanmically Type language?
+
+-->JavaScript is a dynamically typed language. Let me explain clearly:
+
+>In a dynamically typed language, the type of a variable is determined at runtime, not at compile time.
+>You don’t need to declare the type of a variable explicitly.
+>The type of a variable can change during execution.
+
+let x = 10;        // x is a number
+console.log(typeof x); // "number"
+
+x = "Hello";       // now x is a string
+console.log(typeof x); // "string"
+
+
+
+9: What will be the output of typeof null?
+--> object
+
+10: What happen when you add a number and a string in JavaScript?
+
+--> 
+11: What is type coersion? Give an example.
+
+-->In JavaScript, if you add a number and a string using the + operator, the number is converted to a string, and string concatenation happens instead of arithmetic addition.
+
+let num = 5;
+let str = "10";
+
+let result = num + str;
+console.log(result);       // "510"
+console.log(typeof result); // "string"
+
+
+12: How can you manually convert a string to a number in JavaScript?
+
+-->let str = "123";
+let num = Number(str);
+console.log(num);         // 123
+console.log(typeof num);  // "number"
+
+let str2 = "123.45";
+console.log(Number(str2)); // 123.45
+
+let invalid = "hello";
+console.log(Number(invalid)); // NaN
+
+
+13: What is the result of "5" - 3 in JavaScript.
+
+--> 2
+Explanation :
+The - operator only works with numbers for subtraction.
+JavaScript automatically tries to convert strings to numbers when using -, *, /, %.
+So "5" (string) is converted to 5 (number), then 5 - 3 is evaluated.
+console.log("5" - 3);  // 2
+console.log(typeof ("5" - 3)); // "number"
+
+14: What is NaN in JavaScript , and how do you check if a value is NaN?
+
+-->Type: number
+Represents: Invalid numeric operations.
+Examples:
+console.log(0 / 0);       // NaN
+console.log("hello" * 3); // NaN
+console.log(Number("abc")); // NaN
+
+15: How do you check a type of a variable in JavaScript.
+
+-->let num = 10;
+let str = "Hello";
+let bool = true;
+let obj = { name: "John" };
+let arr = [1, 2, 3];
+let func = function() {};
+let undef;
+let n = null;
+
+console.log(typeof num);   // "number"
+console.log(typeof str);   // "string"
+console.log(typeof bool);  // "boolean"
+console.log(typeof obj);   // "object"
+console.log(typeof arr);   // "object" (arrays are objects in JS)
+console.log(typeof func);  // "function"
+console.log(typeof undef); // "undefined"
+console.log(typeof n);     // "object" (this is a historical quirk)
