@@ -2,9 +2,9 @@
 This repository is a comprehensive collection of JavaScript concepts, exercises, and mini-projects. It covers everything from basic fundamentals like variables, operators, loops, and conditionals, to advanced topics such as DOM manipulation, event handling, functional programming, OOPs, JSON &amp; APIs, async programming, and modular JavaScript.  
 # ⚡ ADVANCED_JAVASCRIPT
 
-![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)
 ![HTML5](https://img.shields.io/badge/HTML5-orange)
 ![CSS3](https://img.shields.io/badge/CSS3-blue)
+![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
